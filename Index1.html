@@ -9,14 +9,28 @@
     <meta charset="UTF-8">
     <title>PRUEBA3</title>
     <style>
-        .box {
-            width: 250px;
-            height: 250px;
-            float : left;
-            margin : 20px;
+        #formulario {
+
+            text-align: center;
         }
-        .dashed {
-            border: 3px dashed black;
+
+        h2 {
+
+            text-align: center
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid rgb(0, 0, 0);
+            margin: 0 auto;
+            font-weight: normal;
+        }
+
+        table {
+            margin-top: 2rem;
+            width: 80%;
+            text-align: center;
         }
     </style>
 
@@ -25,34 +39,33 @@
 
 <body>
 
-            <form  method="POST" id="formulario" onsubmit="return false">
-                <h1 id="res">REGISTRO DE ASIGNATURAS</h1><br>
-                <div class="row">
-                    <div id="info" class="col"> 
-                        <input type="text" id="as" class="form-control" placeholder="Asignatura"><br> 
-                            <input type="text" id="p1" class="form-control" placeholder="PrimeraN"><br> 
-                            <input type="number" id="p2" class="form-control" placeholder="SegundaN Previo"><br>
-                             <input type="number" id="p3" class="form-control" placeholder="TerceraN Previo"><br>
-                             <input type="number" id="ex" class="form-control"placeholder="Examen Final"><br> </div>
-                </div>
-                <p>
-                    <button type="submit"id="boton">subir</button>
-                </p>
-            </form>
+    <form method="POST" id="formulario" onsubmit="return false">
+        <h1 id="res">REGISTRO DE ASIGNATURAS</h1><br>
+        <div class="row">
+            <div id="info" class="col">
+                <input type="text" id="as" class="form-control" placeholder="Asignatura" required><br>
+                <input type="number" id="p1" class="form-control" placeholder="PrimeraN" step="0.01"  min="0.0" max="5.0" required><br>
+                <input type="number" id="p2" class="form-control" placeholder="SegundaN Previo" step="0.01" min="0.0" max="5.0" required><br>
+                <input type="number" id="p3" class="form-control" placeholder="TerceraN Previo" step="0.01" min="0.0" max="5.0" required><br>
+                <input type="number" id="ex" class="form-control" placeholder="ex" step="0.01" min="0.0" max="5.0" required><br>
+            </div>
         </div>
-    
-        <div id="datos">
-            <table id="table" class="table">
-              <thead class="thead-dark">
-    
-              </thead>
-    
-              <tbody id="tab">
-    
-              </tbody>
-            </table>
-          </div>
-        <script type="text/javaScript" src="app.js"></script>
+        <p>
+            <button type="submit" id="boton">subir</button>
+        </p>
+    </form>
+    </div>
+
+    <div id="datos">
+        <table id="table" class="table">
+
+
+
+
+
+        </table>
+    </div>
+    <script type="text/javaScript" src="app.js"></script>
 </body>
 
 </html>
